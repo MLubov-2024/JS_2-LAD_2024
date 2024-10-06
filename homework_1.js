@@ -71,3 +71,4 @@ blackDog = { color: 'grey' }; //{ color: 'grey' } object
 console.log(blackDog,typeof (blackDog));
 
 //add HW1
+//проверка
