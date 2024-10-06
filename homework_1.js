@@ -70,5 +70,3 @@ blackDog = { color: 'grey' }; //{ color: 'grey' } object
 
 console.log(blackDog,typeof (blackDog));
 
-//add Git
-//add HW1
