@@ -1,41 +1,164 @@
-console.log ('кот' > 'код', typeof('кот' > 'код')); //true boolean строки в JavaScript сравниваются посимвольно
+/*function number(num)
+{
+    return num*num;
+}
+console.log(number(3))*/
 
-console.log ('2' + 2 * '2', typeof('2' + 2 * '2')); //24 string конкатенация
+/*function sum(a, b)
+{
+    return a + b;
+}
+console.log(sum(5, 10))*/
 
-console.log (undefined == null, typeof(undefined == null)); //true boolean при нестрогом равенстве эти значения равны друг другу
+/*function action(a,b,c)
+{
+    return (a-b)/c;
+}
+console.log(action(15,5,2))*/
 
-console.log (undefined != null, typeof(undefined != null)); //false boolean из правила выше
+/*function getDay(day)
+{
+    switch (day)
+    {
+        case 1: console.log('Пн'); 
+        break;
+        case 2: console.log('Вт'); 
+        break;
+        case 3: console.log('Ср'); 
+        break;
+        case 4: console.log('Чт'); 
+        break;
+        case 5: console.log('Пт'); 
+        break;
+        case 6: console.log('Сб'); 
+        break;
+        case 7: console.log('Вс'); 
+        break;
+        default:
+		console.log('введите верное значение');
+	    break;
+    }    
+    return day;
+}
+getDay(8);*/
 
-console.log (null == 0, typeof(null == 0)); //false boolean для нестрогого равенства == значений undefined и null действует особое правило: эти значения ни к чему не приводятся, они равны друг другу и не равны ничему другому
+/*function func(a,b)
+{
+    return a==b;
+}
+console.log(func(3,3))*/
 
-console.log (2 > "3", typeof(2 > "3")); //false boolean 2>3
+/*function func(a,b)
+{
+    return a+b >10;
+}
+console.log(func(10,3))*/
 
-console.log (null - false + true, typeof(null - false + true)); //1 number 0-0+1
+/*function func(a)
+{
+    return a < 0;
+}
+console.log(func(-5))*/
 
-console.log (1 / "l", typeof(1 / "l"));// NaN number т.к число/строку
+/*function isNumberInRange(a)
+{
+    return (a > 0 && a <= 10);
+}
+console.log(isNumberInRange(2))*/
 
-console.log ("2" * "3", typeof("2" * "3"));// 6 number 2*3
+/*let arr = [5,1,2,0,9,10,15,27,5,78,9,25,4,3];
+let newArr = [];    
+    for (let i = 0; i < arr.length; i++) 
+    {
+       if (isNumberInRange(arr[i])) 
+        {
+        newArr.push(arr[i]);
+        }
+    }    
+     console.log(newArr);
+     function isNumberInRange (num) 
+     {
+        return num > 0 && num <= 10;
+    }*/
 
-console.log (4 + 5 + "O", typeof(4 + 5 + "O"));// 9O string бинарный+ и конкатенация
+/*function getDigitsSum(num)
+{
+    let sum = 0;
+    let str = String(num);
+    for (let i = 0; i < str.length; i++) 
+        sum += Number(str[i]);
+    return sum; 
+}
+console.log(getDigitsSum(125));*/
 
-console.log ("l" + 4 + 5, typeof("l" + 4 + 5));// l45 string конкатенация
+/*function getDigitsSum(num) 
+{
+    let str = String(num);
+    let sum = 0;
+    for (let i = 0; i < str.length; i++) 
+    {
+        sum += Number(str[i]);
+    }
+       return sum;
+}    
+    let years = [];    
+    for (let i = 1; i <= 2020; i++) 
+    {
+        if (getDigitsSum(i) == 13) 
+        {
+         years.push(i);
+        }
+    }    
+     console.log(years);*/
 
-console.log ("4" - 2, typeof("4" - 2));// 2 number вычитание
+/*function isEven(num) 
+{
+    return num % 2 == 0;
+}        
+console.log(isEven(4));*/
 
-console.log ("4" - "4x", typeof("4" - "4x"));// NaN number т.к математические операции не с числами выполняем
+/*let arr = [10,0,5,4,2,3,7,2,8,9,3,6];
+let newArr = [];
+for (let i = 0; i < arr.length; i++) 
+    {
+       if (isEven(i)) {
+         newArr.push(i);
+       }
+    }
+    console.log(newArr);    
+function isEven(num) 
+{
+    return num % 2 == 0;
+}*/
 
-console.log ('23' == 23, typeof('23' == 23));// true boolean 23=23
+/*function getDivisors(num) 
+{
+let res = [];
+for (let i = 1; i < num; i++) 
+{
+   if (num % i == 0) 
+    {
+        res.push(i);
+    }
+}
+return res;
+}    
+console.log(getDivisors(26));*/
 
-console.log (null == false, typeof(null == false));// false boolean нестрогая проверка на равенство null и undefined с чем угодно другим всегда дает false
+/*let num = 821;
+function isSumNumbers(num) 
+{
+    if (num === 0) return 0;
+    return (num - 1) % 9 + 1;
+}
+console.log(isSumNumbers(num))*/
 
-console.log (" -4 "/ 0 + 1, typeof(" -4 "/ 0 + 1));// -Infinity number -4/0+1
-
-console.log (null + 1, typeof(null + 1));// 1 number, ничего+1
-
-console.log (undefined + null, typeof(undefined + null));// NaN number, так как матем оп не с числами
-
-console.log (1 === '1', typeof(1 === '1'));// false boolean значение и тип дб строго идентичными при ===
-
-console.log ('2' > 10, typeof('2' > 10));// false boolean 2<10
-
-console.log (NaN == undefined, typeof(NaN == undefined));// false boolean знач null/undefined равны == друг другу и не равны любому др знач
+function isPalindrome(str) {
+    let rev = str.split("").reverse().join("");
+    if (rev == str) {
+      return true
+    } else {
+      return false
+    }
+  }
+  console.log(isPalindrome('топот'))
